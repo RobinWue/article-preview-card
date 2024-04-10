@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-accent-1: rgb(33, 29, 59);
+  --clr-accent-2: darkorange;
+  --clr-category: deepskyblue;
+  --clr-accent-3: grey;
+
+  --s-base: 1rem;
+  --border: 0.125rem;
+  --radius-outer: 0.75rem;
+  --radius-inner: calc(var(--radius-outer) / 3);
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 2rem;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+article {
+  border: var(--border) solid black;
+  border-radius: var(--radius-outer);
+}
+
+.button-1 {
+  display: flex;
+  justify-content: flex-start;
+  border: none;
+  padding-left: 0;
+  margin: 0;
+  margin-right: 0.5em;
+  margin-bottom: 0;
+  background-color: var(--clr-accent-1);
+  color: white;
+  padding: 1em;
+  border-radius: var(--radius-inner);
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.button-2 {
+  border: none;
+  background-color: var(--clr-accent-2);
+  color: white;
+  padding: 1em;
+  border-radius: var(--radius-inner);
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.date {
+  color: var(--clr-accent-3);
+  justify-content: left;
+  display: inline-block;
+}
+
+.aside {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0;
+  margin: 0;
+  width: 100%;
+  height: 2em;
+  font-size: 0.7rem;
+}
+
+.aside aside {
+  background-color: var(--clr-category);
+  padding: 0.1em 0.5em;
+  border-radius: 1em;
+  display: inline-block;
+  margin-right: 0.5em;
+  margin-bottom: 0;
+}
+
+.preview-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 1rem;
+  padding: 1em;
+}
+
+.preview-card:first-child {
+  border-bottom: 10px solid var(--clr-accent-1);
+  border-right: 10px solid var(--clr-accent-1);
+}
+
+.preview-card:last-child {
+  border-bottom: 10px solid var(--clr-accent-2);
+  border-right: 10px solid var(--clr-accent-2);
+}
+
+.preview-card__image-wrapper {
+  height: 200px; /* Feste Höhe */
+  width: 100%; /* Sorgt dafür, dass die Wrapper die volle Breite einnehmen */
+  /* Weitere Styles */
+}
+
+.preview-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Media Queries für unterschiedliche Bildschirmgrößen */
+@media (max-width: 768px) {
+  /* Für Tablets */
+  .preview-card__image-wrapper {
+    height: 150px; /* Eine kleinere Höhe für kleinere Bildschirme */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Für Smartphones */
+  .preview-card__image-wrapper {
+    height: 120px;
+  }
+}
