@@ -63,8 +63,33 @@ article {
 
 .date {
   color: var(--clr-accent-3);
-  justify-content: left;
-  display: inline-block;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.avatar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+
+.avatar1 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 2em;
+  border-radius: var(--radius-outer);
+  border: 2px solid var(--clr-accent-1);
+}
+
+.avatar2 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 2em;
+  border-radius: var(--radius-outer);
+  border: 2px solid var(--clr-accent-2);
 }
 
 .aside {
@@ -106,9 +131,9 @@ article {
 }
 
 .preview-card__image-wrapper {
-  height: 200px; /* Feste Höhe */
-  width: 100%; /* Sorgt dafür, dass die Wrapper die volle Breite einnehmen */
-  /* Weitere Styles */
+  aspect-ratio: 2/1;
+  max-height: 15rem;
+  width: 100%;
 }
 
 .preview-card__image {
